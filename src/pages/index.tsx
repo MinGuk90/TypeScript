@@ -1,9 +1,9 @@
+import Layout from '../components/Layout';
 
-
-function Home() {
+export default function Home() {
   return (
-    <h1>It Works</h1>
+    <Layout pageTitle="Home">
+      <h1>Works</h1>
+    </Layout>
   )
 }
-
-export default Home

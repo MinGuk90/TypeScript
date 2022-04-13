@@ -1,0 +1,28 @@
+import React from 'react'
+import Head from 'next/head'
+import Header from './Header'
+import Footer from './Footer'
+
+interface LayoutProps {
+  pageTitle: string
+  children: JSX.Element,
+}
+
+const Layout: React.FC<LayoutProps> = ({pageTitle, children}) => {
+  return (
+    <>
+    <Head>
+      <title>{pageTitle}</title>
+    </Head>
+    <div>
+      <main>
+        <Header/>
+        {children}
+      </main>
+      <Footer/>
+    </div>
+      </>
+  )
+}
+
+export default Layout
