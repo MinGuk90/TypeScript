@@ -5,8 +5,15 @@ interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
   return (
-    <header>
-      <AppLink href="/" label="Next.js"/>
+    <header style={{
+      display: 'flex',
+      justifyContent: 'space-between'
+    }}>
+      <AppLink href="/" label="Next.js" />
+      <nav>
+        <AppLink href="/about" label="About.js" />
+        <AppLink href="/contact" label="Contact.js" />
+      </nav>
     </header>
   )
 }

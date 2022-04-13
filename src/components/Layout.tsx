@@ -5,14 +5,18 @@ import Footer from './Footer'
 
 interface LayoutProps {
   pageTitle: string
-  children: JSX.Element,
+  children?:
+  | JSX.Element
+  | JSX.Element[]
+  | string
+  | string[];
 }
 
 const Layout: React.FC<LayoutProps> = ({pageTitle, children}) => {
   return (
     <>
     <Head>
-      <title>{pageTitle}</title>
+      <title>Next.js | {pageTitle}</title>
     </Head>
     <div>
       <main>
